@@ -9,8 +9,9 @@ library(tibble)
 library(Seurat)  ##version 3.0
 library(dplyr)
 
+#download Matrix data https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE125970&format=file&file=GSE125970%5Fraw%5FUMIcounts%2Etxt%2Egz from https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE125970
 time_fread <- system.time(
-  test <- fread("/Volumes/学术资料备份/QYD_Data_Backup/U盘备份/PLC/GSE125970_raw_UMIcounts.txt",)
+  test <- fread("./GSE125970_raw_UMIcounts.txt",)
 )
 
 paste("数据的大小为：",format(object.size(test),units="auto"))
